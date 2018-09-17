@@ -50,7 +50,7 @@ a {
     font-size: 12px;
     color: #b7b7b7;
     font-weight: bold;
-    border-top: 3px solid transparent;/* 直接设置一个固定透明的边框，解决hover后li被挤一下 */
+    border-top: 3px solid transparent;/* 这里是对齐（直接设置一个固定透明的边框，解决hover后li被挤一下） */
     border-bottom: 3px solid transparent;
     padding-top: 5px;/* 为了让字与边框之间有空隙 */
     padding-bottom: 5px;
@@ -86,83 +86,77 @@ a {
 }
 .userCard {
     max-width: 940px;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: #fffff;
-
-}
-.userCard .welcome {
-    background: #e6686a;
-    color: white;
-    display: inline-block;
-    padding: 4px 16px;
-    line-height: 22px;
-    position: relative;
-    margin-bottom: 10px;
-}
-.userCard .welcome .triangle {
-    display: block;
-    border: 10px solid transparent;
-    width: 0px;
-    border-left-color: #e6686a;
-    border-top-width: 0px;
-    position: absolute;
-    left: 4px;
-    top:100%;
+    margin:0 auto;
+    background: white;
 }
 .userCard .picture {
-    float: left;    
+    float: left;
 }
 .userCard .text {
     float: left;
     margin-left: 65px;
-    width: 470px;
 }
-.userCard .text h1 {
-    margin-top: 18px;
-
+.userCard .welcome {
+    background: #e6686a;
+    color: white;
+    padding: 4px 16px;
+    line-height: 22px;
+    display: inline-block;/* 可以让元素不因为padding变大往上走 */
+    position: relative;
 }
-.userCard .text hr {
-    margin: 20px 0;
-
+.userCard .welcome .triangle {
+    width: 0;
+    border: 10px solid transparent;
+    border-top-width: 0;
+    border-left-color: #e6686a;
+    position: absolute;
+    top: 100%;
+    left: 4px;
 }
 .userCard .pictureAndText{
     padding: 50px;
-
+}
+.userCard .text h1 {
+    margin-top: 28px;
+}
+.userCard .text hr {
+    margin: 20px 0;
+    width: 470px;
+    border: none;/* 先把边框干掉再重新设置 */
+    border-top: 1px solid #DEDEDE;
 }
 .userCard dl dt,
 .userCard dl dd{
     float: left;
     padding: 5px 0;
-
 }
-.userCard dl dt{
+.userCard dl dt {
     width: 40%;
     font-weight: bold;
+
 }
-.userCard dl dd{
+.userCard dl dd {
     width: 60%;
-    color: #9da0a7;
+    color: #9DA0A7;
 }
-.userCard > footer.media{
-    background: #e6686a;
+footer.media {
+    background: #e06567;
     text-align: center;
 }
-.userCard > footer.media > a {
+footer.media > a {
     display: inline-block;
     width: 40px;
     line-height: 30px;
-    padding: 5px 0;
-    border-radius: 50%;
+    padding: 5px 0;/* 居中 */
     margin: 16px;
+    border-radius: 50%;
 }
-.userCard > footer.media > a:hover{
-    background: #cf5d5f;
-
-}
-.userCard svg{
+.userCard svg {
     width: 30px;
     height: 30px;
     fill: white;
     vertical-align: top;
+}
+footer.media > a:hover {
+    background:#CF5D5F;
 }
