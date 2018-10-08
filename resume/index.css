@@ -130,7 +130,7 @@ a {
     border: none;/* 先把边框干掉再重新设置 */
     border-top: 1px solid #DEDEDE;
 }
-.userCard dl dt,
+.userCard dl dt, 
 .userCard dl dd{
     float: left;
     padding: 5px 0;
@@ -138,7 +138,6 @@ a {
 .userCard dl dt {
     width: 40%;
     font-weight: bold;
-
 }
 .userCard dl dd {
     width: 60%;
