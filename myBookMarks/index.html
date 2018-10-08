@@ -48,12 +48,27 @@
             while(index2<row.length){
                 kbdXX = document.createElement('kbd');
                 kbdXX.textContent = row[index2];
+                buttonX = document.createElement('button');
+                buttonX.textContent = '编辑';
+                buttonX.id = row[index2];
+                buttonX.onclick = function(xzkjcnxlkcjlk){
+                    key = xzkjcnxlkcjlk['target']['id'];
+                    x = prompt('给我一个新网址');
+                    hash[key] = x;
+                }
+                kbdXX.appendChild(buttonX);
                 divXX.appendChild(kbdXX);
                 index2++;
             }
             index++;
         }
-
+        
+        document.onkeypress = function(xzkjcnxlkcjlk){
+           key = xzkjcnxlkcjlk['key'];//必须加引号
+           website = hash[key];//这里的本来就是一个变量
+           window.open('http://'+website,'_blank');
+           
+        }
     </script>
 </body>
 </html>
