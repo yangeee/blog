@@ -39,6 +39,12 @@
             z:'zhihu.com',
             m:'https://www.mcdonalds.com.cn/'
         }
+        //取出本地localStorage中的hash 
+        var hashInLocalStorage = JSON.parse(localStorage.getItem('zzz') || '');
+        if(hashInLocalStorage){
+            hash = hashInLocalStorage;
+        }
+        //遍历生成div和kbd标签
         index = 0;
         while(index<keys['length']){
             divXX = document.createElement('div');
@@ -51,6 +57,7 @@
                 buttonX = document.createElement('button');
                 buttonX.textContent = '编辑';
                 buttonX.id = row[index2];
+                // 编辑新网站
                 buttonX.onclick = function(xzkjcnxlkcjlk){
                     key = xzkjcnxlkcjlk['target']['id'];
                     x = prompt('给我一个新网址');
@@ -65,7 +72,7 @@
         
         document.onkeypress = function(xzkjcnxlkcjlk){
            key = xzkjcnxlkcjlk['key'];//必须加引号
-           website = hash[key];//这里的本来就是一个变量
+           website = hash[key];//这里的key就是一个变量
            window.open('http://'+website,'_blank');
            
         }
