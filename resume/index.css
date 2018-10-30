@@ -46,12 +46,21 @@ a {
     top:0;
     left: 0;
     width: 100%;/* fixed定位后会自动缩小 */
+    transition: all 0.5s;
+    color: #b7b7b7;
+}
+.topNavBar.sticky{
+    background: white;
+    padding:10px 0;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    color: #3d4451;
 }
 .topNavBar-inner{
     padding: 0 17px;
 }
 .topNavBar  nav {
-    padding-top: 7px;/* 文字字体小，所以设置内边距居中 */
+    padding-top: 5px;/* 文字字体小，所以设置内边距居中 */
     float: right;
  }
  .topNavBar  nav > ul {
@@ -66,8 +75,8 @@ a {
 }
 .topNavBar  nav > ul > li > a {
     font-size: 12px;
-    color: #b7b7b7;
     font-weight: bold;
+    color: inherit;
     border-top: 3px solid transparent;/* 这里是对齐（直接设置一个固定透明的边框，解决hover后li被挤一下） */
     border-bottom: 3px solid transparent;
     padding-top: 5px;/* 为了让字与边框之间有空隙 */

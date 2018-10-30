@@ -15,7 +15,7 @@
     <div id="siteWelcome" class="loading-wrapper active">
         <div class="loading"></div>
     </div>
-    <div class="topNavBar">
+    <div class="topNavBar" id='topNavBar'>
         <div class="topNavBar-inner clearfix">
             <a href="#" class="logo">
                 <span class="rs">RS</span>
@@ -176,5 +176,14 @@
     setTimeout(() => {
         siteWelcome.classList.remove('active');
     }, 2000);
+
+    window.onscroll = function(xxx){
+        if(window.scrollY > 0){
+            topNavBar.classList.add('sticky');
+        }
+        else{
+            topNavBar.classList.remove('sticky');
+        }
+    }
 </script>
 </html>
