@@ -24,7 +24,7 @@ body {
     fill: currentColor;
     overflow: hidden;
  }
-ol{
+ol,ul{
     list-style: none;
 }
 *{
@@ -72,6 +72,7 @@ a {
     float: left;
     margin-left: 17px;
     margin-right: 17px;
+    position: relative;
 }
 .topNavBar  nav > ul > li > a {
     font-size: 12px;
@@ -83,18 +84,52 @@ a {
     padding-bottom: 5px;
     display: block;/* 解决a标签中的元素高度大于li，能把高度撑开 */
     position: relative;
+
 }   
-.topNavBar  nav > ul > li > a:hover::after {
+.topNavBar  nav > ul > li.active > a::after {
     content: '';
-    display: ruby;
+    display: block;
     position: absolute;
-    top: 100%;
+    top: 100%;/* 这里是个小技巧，表示的是距离a标签上边框的高度是a的高度 */
     left: 0;
     width: 100%;
-    background: red;
-    height: 10px;
+    background: #e06567;
+    height: 3px;
+    animation: menuSlide 1s;
 }
-
+@keyframes menuSlide{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+.topNavBar .submenu{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: white;
+    color: #3d4451;
+    box-shadow: 
+}
+.topNavBar li.active > .submenu{
+    display: block;
+    animation: submenuSlide .3s;
+}
+@keyframes submenuSlide{
+    0%{
+        margin-right:100%;
+    }
+    100%{
+        margin:0%;
+    }
+}
+.topNavBar .submenu > li{
+    white-space: nowrap;
+    padding: 5px 10px;
+}
 .topNavBar .logo {
     font-size: 24px;
     font-family: "Arial Black";
