@@ -7,8 +7,8 @@
 .loading::before,.loading::after{
   content:'';
   position: absolute;
-  width:0px;
-  height:0px;
+  width:1px;
+  height:1px;
   background: black;
   border-radius:50%;
   top:0;
@@ -16,16 +16,19 @@
   right:0;
   bottom:0;
   margin:auto;
-  animation:s 1.5s linear infinite;
+  animation: s 1.5s linear infinite;
+  
 }
 .loading::after{
   animation-delay:0.75s;
 }
 @keyframes s{
   0%{
-    width:0;height:0;opacity:1;
+    opacity:1;
+    transform: scale(0,0);
   }
   100%{
-    width:100px;height:100px;opacity:0;
+    opacity:0;
+    transform: scale(100,100);
   }
 }

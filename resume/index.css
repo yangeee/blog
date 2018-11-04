@@ -82,9 +82,17 @@ a {
     padding-top: 5px;/* 为了让字与边框之间有空隙 */
     padding-bottom: 5px;
     display: block;/* 解决a标签中的元素高度大于li，能把高度撑开 */
+    position: relative;
 }   
-.topNavBar  nav > ul > li > a:hover {
-    border-bottom: 3px solid #e06567;
+.topNavBar  nav > ul > li > a:hover::after {
+    content: '';
+    display: ruby;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: red;
+    height: 10px;
 }
 
 .topNavBar .logo {
