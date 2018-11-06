@@ -112,7 +112,7 @@ a {
     top: 100%;
     background: white;
     color: #3d4451;
-    box-shadow: 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
 }
 .topNavBar li.active > .submenu{
     display: block;
@@ -129,6 +129,7 @@ a {
 .topNavBar .submenu > li{
     white-space: nowrap;
     padding: 5px 10px;
+    cursor: pointer;
 }
 .topNavBar .logo {
     font-size: 24px;
