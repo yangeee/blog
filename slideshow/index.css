@@ -1,0 +1,14 @@
+*{box-sizing: border-box;}
+.window{
+    border: 1px red solid;
+    width: 920px;
+    height: 400px;
+    margin: 0 auto;
+}
+.slide{
+    display: flex;/*  图片处于一行 */ 
+}
+.slide > img{
+    width: 920px;/* 子元素设置宽高才能保持并排 */
+    height: 400px;
+}
