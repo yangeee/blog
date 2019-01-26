@@ -1,14 +1,48 @@
-*{box-sizing: border-box;}
+*{box-sizing: border-box;background-color: #F2F2F2;}
 .window{
-    border: 1px red solid;
     width: 920px;
-    height: 400px;
-    margin: 0 auto;
+    height: 455px;
+    margin: 200px auto;
+    overflow: hidden;/* 加在window上 */
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.42);
+    border: 2px;
 }
-.slide{
+.slides{
     display: flex;/*  图片处于一行 */ 
+    transition: all 0.6s;
+
 }
-.slide > img{
+.slides > img{
     width: 920px;/* 子元素设置宽高才能保持并排 */
     height: 400px;
+    box-shadow: 0px 2px 0px -1px rgba(0,0,0,0.09);
+}
+.buttons{
+    text-align: center;
+    background-color: #F2F2F2;
+    margin: 2px;
+}
+.buttons > div{
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+   
+    background-color: #F2F2F2;
+    background-repeat: no-repeat;
+    display: inline-block;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.52);
+    background-position:center center;
+}
+#button-1{
+    background-image: url(111.png);
+
+}
+#button-2{
+    background-image: url(222.png);
+}
+#button-3{
+    background-image: url(333.png);
+}
+#button-4{
+    background-image: url(333.png);
 }
