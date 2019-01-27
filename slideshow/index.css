@@ -26,12 +26,21 @@
     width: 55px;
     height: 55px;
     cursor: pointer;
-   
     background-color: #F2F2F2;
     background-repeat: no-repeat;
     display: inline-block;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.52);
     background-position:center center;
+    transition: all 0.5s;
+    opacity: 0.5;
+}
+.buttons > div:hover{
+    opacity: 1;
+    background-color: white;
+}
+.buttons>div.click{
+    opacity: 1;
+    background-color: white;
 }
 #button-1{
     background-image: url(111.png);
@@ -39,10 +48,12 @@
 }
 #button-2{
     background-image: url(222.png);
+    background-position:center 45%;
 }
 #button-3{
     background-image: url(333.png);
 }
 #button-4{
-    background-image: url(333.png);
+    background-image: url(444.png);
+    background-position:center 45%;
 }

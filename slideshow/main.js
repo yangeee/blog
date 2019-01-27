@@ -1,15 +1,31 @@
 let $slides = $('#slides');
 let $images = $slides.children('img');
 let $buttons = $('.buttons>div');
-$buttons.eq(0).on('click',function(){
-    $slides.css({transform:'translateX(0px)'})
-})
-$buttons.eq(1).on('click',function(){
-    $slides.css({transform:'translateX(-920px)'})
-})
-$buttons.eq(2).on('click',function(){
-    $slides.css({transform:'translateX(-1840px)'})
-})
-$buttons.eq(3).on('click',function(){
-    $slides.css({transform:'translateX(-2760px)'})
-})
+let current = 0;//这里不能放函数里，因为goTo的作用域是全局，所以函数里的current改变不了的
+
+function clickPlay(){
+    let a = setInterval(function(){
+        goTo(current++);
+    },1000);
+    $('.buttons').on('click','div',function(e){
+        clearInterval(a);
+        let $button = $(e.currentTarget)
+        let $index = $button.index();
+        goTo($index);
+        current = $index;
+        a = setInterval(function(){
+            goTo(current++);//这里必须用current，因为依靠全局的current来控制自动
+        },1000);
+    });
+}
+
+function goTo(index){
+    console.log(index)
+    if(index>=$buttons.length-1){
+        current = 0;
+    }
+    $slides.css({transform:`translateX(${-(index)*920}px)`});
+    
+}
+   
+clickPlay();
