@@ -25,7 +25,8 @@ function goTo(index){
         current = 0;
     }
     $slides.css({transform:`translateX(${-(index)*920}px)`});
-    
+    $buttons.removeClass('click');
+    $buttons.eq(index).addClass('click');
 }
    
 clickPlay();
