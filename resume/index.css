@@ -273,6 +273,7 @@ footer.media > a:hover {
     margin: 55px auto 52px;
     
 }
+.message h2,
 .skills h2 {
     text-align: center;
     color: #3D4451;
@@ -402,4 +403,16 @@ section.portfolio .swiper-button-next{
 section.portfolio .swiper-button-prev:hover,
 section.portfolio .swiper-button-next:hover{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+section.message{
+    max-width: 800px;
+    margin: 30px auto;
+}
+section.message > ol{
+    margin-bottom: 30px;
+}
+section.message > ol > li{
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f4f4f4;
 }
