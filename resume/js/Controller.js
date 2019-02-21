@@ -1,5 +1,4 @@
-window.Controller = function(options){
-    var init = options.init
+window.Controller = function(){
     return {
         view: null,
         messageList: null,
