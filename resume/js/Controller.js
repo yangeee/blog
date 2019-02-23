@@ -21,8 +21,11 @@ window.Controller = function () {
               let li = document.createElement('li')
               li.innerText = `${item.name}: ${item.content}`
               let messageList = document.querySelector('#messageList')
-              messageList.appendChild(li);
+              messageList.appendChild(li); 
             })
+          },
+          function(error){
+            console.log('失败'+error)
           }
         )
     },
