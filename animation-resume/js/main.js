@@ -20,6 +20,26 @@ html{
     border: 1px solid red;
     padding: 16px;
 }
+
+/* 我需要一点代码高亮 */
+
+.token.selector{
+    color: #690;
+}
+.token.property{
+    color: #905;
+}
+.token.function{
+    color: #DD4A68
+}
+
+/* 加点3D效果 */
+#code{
+
+}
+
+/* 不玩了，我来介绍一下我自己 */
+/* 我需要一张白纸 */
 `
 
 var n = 0
@@ -30,5 +50,10 @@ var id = setInterval(() => {
     styleTag.innerHTML = result.substring(0,n)
     if(n >= result.length){
         window.clearInterval(id)
-    }
+        fn2()
+    }   
 },10)
+
+function fn2(){
+    
+}
