@@ -11,7 +11,7 @@
             if (n >= code.length) {
                 window.clearInterval(id)
             }
-        },15)
+        },25)
     }
     let code = `
 /*
