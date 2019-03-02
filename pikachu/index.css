@@ -1,0 +1,133 @@
+*{
+    margin: 0; padding:0; box-sizing: border-box;
+}
+*::after{
+    box-sizing: border-box;
+}
+*::before{
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: #FEE433;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    width: 100%;
+    height: 166px;
+    position: relative;
+}
+.nose{
+    width: 0px;
+    height: 0px;
+    border: 11px solid;
+    border-radius: 11px;
+    border-color:black transparent transparent;
+    position: absolute;
+    left: 50%;
+    top: 28px;
+    margin-left: -11px;
+}
+.eye{
+    width: 49px;
+    height: 49px;
+    background: #2F2F2F;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+.eye::after{
+    content: '';
+    display: block;
+    height: 24px;
+    width: 24px;
+    background: white;
+    position: absolute;
+    border-radius: 50%;
+    left: 6px;
+    top: 2px;
+    border: 2px solid white;
+}
+.eye.right{
+    left: 50%;
+    margin-left: 90px;
+}
+.eye.left{
+    right: 50%;
+    margin-right: 90px;
+}
+.face{
+    width: 68px;
+    height: 68px;
+    background: #FC0D1C;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+}
+.face.left{
+    right: 50%;
+    margin-right: -180px;
+}
+.face.right{
+    left: 50%;
+    margin-left: -180px;
+}
+.upperLip{
+    height: 20px;
+    width: 80px;
+    border: 3px solid black;  
+    border-top: none;
+    background: #FEE433;
+    position: absolute;
+    top: 52px;
+    
+}
+.upperLip.left{
+    right: 50%;
+    border-bottom-left-radius: 40px 25px;
+    transform: rotate(-20deg);
+    border-right: none;
+}
+.upperLip.right{
+    left: 50%;
+    border-bottom-right-radius: 40px 25px;
+    transform: rotate(20deg);
+    border-left: none;
+}
+.lowerLip-wrapper{
+    bottom: -42px;
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    z-index: -1;
+    width: 300px;
+    height: 150px;
+    overflow: hidden;
+}
+.lowerLip{
+    width: 140px;
+    height: 2000px;
+    background: #990513;
+    border-radius: 100px/500px;
+    border: 3px solid black;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -70px;
+    z-index: -1;
+    overflow: hidden;
+}
+.lowerLip::after{
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    margin-left: -75px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background: #FB4B62;
+}

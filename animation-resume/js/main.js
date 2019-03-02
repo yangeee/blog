@@ -100,7 +100,7 @@ function writeCode(prefix,code,fn){
             window.clearInterval(id)
             fn.call()
         }
-    },30)
+    },0)
 }
 
 function writeMarkdown(markdown){
@@ -113,7 +113,7 @@ function writeMarkdown(markdown){
         if (n >= markdown.length) {
             window.clearInterval(id)
         }
-    },30)
+    },0)
 }
 
 function createPaper(fn) {
