@@ -28,3 +28,15 @@
     height: 166px;
     position: relative;
 }
+.actions{
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}
+.actions>button{
+    margin: 10px;
+    background: #ddd;
+}
