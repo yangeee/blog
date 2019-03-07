@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import './style.scss';
 
-function component() {
+var component = () => {
     let element = document.createElement('div');
   
     // Lodash（目前通过一个 script 脚本引入）对于执行这一行是必需的
@@ -11,4 +11,5 @@ function component() {
   }
   
   document.body.appendChild(component());
+  
   
