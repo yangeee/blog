@@ -10,7 +10,7 @@ var result2 =`
     justify-content: center;
     align-items: center;
     padding: 16px;
-    background: black;
+    background: #282C34;
 
 }
 #paper > .content{
@@ -33,7 +33,7 @@ var result = `/*
     transition: all 1s;
 }
 html{
-    background: rgb(222,222,222);
+    background: white;
     font-size: 16px;
 }
 #code{ 
@@ -100,7 +100,7 @@ function writeCode(prefix,code,fn){
             window.clearInterval(id)
             fn.call()
         }
-    },0)
+    },15)
 }
 
 function writeMarkdown(markdown){
@@ -113,7 +113,7 @@ function writeMarkdown(markdown){
         if (n >= markdown.length) {
             window.clearInterval(id)
         }
-    },0)
+    },15)
 }
 
 function createPaper(fn) {
