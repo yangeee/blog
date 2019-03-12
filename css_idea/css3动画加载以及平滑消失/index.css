@@ -11,9 +11,10 @@
     position: absolute;
     right: 0;
     top: 0;
-    transition-timing-function:ease-in-out;
-    transition-property:all;
-    transition-duration: 2s;
+    /*  下面三句实现  */
+    transition-timing-function:ease-in-out;/* 最重要的，规定动画出现与消失 */
+    transition-property:all;/* 规定什么属性发生动画 */
+    transition-duration: 2s;/* 动画时间 */
   }
   .xxx{
     background: gray;
