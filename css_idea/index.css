@@ -1,0 +1,23 @@
+.xxx:hover::after{
+    width: 300px;
+    background: rgba(29, 173,231);
+  }
+  .xxx:after{
+    content: "";
+    display: block;
+    height: 100%;
+    background:  rgba(35, 41, 43);
+    width: 4px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition-timing-function:ease-in-out;
+    transition-property:all;
+    transition-duration: 2s;
+  }
+  .xxx{
+    background: gray;
+    width:300px;
+    height: 300px;
+    position: relative;
+  }
