@@ -1,3 +1,10 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .xxx:hover::after{
     width: 300px;
     background: rgba(29, 173,231);
@@ -12,7 +19,7 @@
     right: 0;
     top: 0;
     /*  下面三句实现  */
-    transition-timing-function:ease-in-out;/* 最重要的，规定动画出现与消失 */
+    transition-timing-function:ease-in-out;/* 贝塞尔曲线实现 */
     transition-property:all;/* 规定什么属性发生动画 */
     transition-duration: 2s;/* 动画时间 */
   }
